@@ -1,6 +1,6 @@
 # Burc Rehberi Uygulamasi
 
-#### PopUp Menu Kullanimi
+#### Uygulama Calismasi
 <img src="images/readme.gif">
 
 
