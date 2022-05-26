@@ -1,4 +1,3 @@
-import 'package:burc_rehberi/burc_detay.dart';
 import 'package:burc_rehberi/model/burc.dart';
 import 'package:flutter/material.dart';
 
@@ -36,12 +35,8 @@ class BurcItem extends StatelessWidget {
               child: Icon(Icons.arrow_forward_sharp),
             ),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => BurcDetay(secilenBurc: listelenenBurc),
-                ),
-              );
+              Navigator.pushNamed(context, "/burcDetay",
+                  arguments: listelenenBurc);
             },
           ),
         ),

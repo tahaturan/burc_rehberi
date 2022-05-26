@@ -18,7 +18,9 @@ class _BurcDetayState extends State<BurcDetay> {
   @override
   void initState() {
     super.initState();
-    appBarRenginiAl();
+    WidgetsBinding.instance.addPostFrameCallback((_) => appBarRenginiAl());
+    //* bazen cok fazla build tetiklenebilir ve cakisma olabilir burada diger buildler tetiklensin sonrasinda sen tetiklen dedik
+    //* burda uygulamanin hizlanmasini saglar
   }
 
   @override
