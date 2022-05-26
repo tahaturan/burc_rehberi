@@ -31,7 +31,9 @@ class BurcItem extends StatelessWidget {
               listelenenBurc.burcTarihi,
               style: myTextStyle.subtitle1,
             ),
-            trailing: const Icon(Icons.arrow_forward_sharp),
+            trailing: const CircleAvatar(
+              child: Icon(Icons.arrow_forward_sharp),
+            ),
           ),
         ),
       ),
