@@ -1,3 +1,4 @@
+import 'package:burc_rehberi/burc_item.dart';
 import 'package:burc_rehberi/data/strings.dart';
 import 'package:burc_rehberi/model/burc.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,7 @@ class BurcListesi extends StatelessWidget {
   late List<Burc> tumBurclar;
   BurcListesi({Key? key}) : super(key: key) {
     tumBurclar = veriKaynaginiHazirla();
-    print(tumBurclar);
+    //print(tumBurclar);
   }
 
   @override
@@ -15,8 +16,13 @@ class BurcListesi extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Burclar Listesi'),
       ),
-      body: const Center(
-        child: Text('Liste Buraya Gelecek'),
+      body: Center(
+        child: ListView.builder(
+          itemCount: tumBurclar.length,
+          itemBuilder: (BuildContext context, int index) {
+            return BurcItem(listelenenBurc: tumBurclar[index]);
+          },
+        ),
       ),
     );
   }
